@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+  background-color: #0f0f0f;
+  color: #e5e5e5;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a877;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8935b;
+}
+
+/* Text Selection */
+::selection {
+  background-color: #c9a877;
+  color: #0f0f0f;
+}
+
+/* Link Hover Effects */
+a {
+  transition: color 0.3s ease;
+}
+
+/* Form Elements */
+input, textarea {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+button {
+  transition: all 0.3s ease;
+}
