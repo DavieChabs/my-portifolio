@@ -6,7 +6,7 @@ export default function Education() {
     {
       type: 'degree',
       title: 'B.S. Software Engineering',
-      institution: 'Michigan State University (MSU)',
+      institution: 'Midlands State University (MSU)',
       duration: 'In Progress',
       description: 'Pursuing a degree in Software Engineering with focus on modern development practices, algorithms, and system design.',
       icon: BookOpen,
