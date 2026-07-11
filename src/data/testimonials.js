@@ -15,10 +15,8 @@ export const testimonials = [
     title: 'Project Partner & Developer',
   },
   {
-    quote: 'His consistency and dedication to providing quality and reliable software is overwhelming.'
+    quote: 'His consistency and dedication to providing quality and reliable software is overwhelming.',
     name: 'Noreen Sarai',
     title: 'Project Supervisor',
   },
-  
-
-
+];
