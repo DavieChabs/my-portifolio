@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import { Mail, MapPin, Send, CheckCircle } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -22,30 +22,25 @@ export default function Contact() {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Michigan State University, USA',
-      link: 'https://www.google.com/maps/search/Michigan+State+University',
+      value: 'Midlands State University, Zimbabwe',
+      link: 'https://www.google.com/maps/search/Midlands+State+University',
     },
   ]
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }))
+    setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsLoading(true)
 
-    // Simulate form submission
     setTimeout(() => {
       console.log('Form submitted:', formData)
       setSubmitted(true)
       setIsLoading(false)
 
-      // Reset form after 2 seconds
       setTimeout(() => {
         setFormData({ name: '', email: '', subject: '', message: '' })
         setSubmitted(false)

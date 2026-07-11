@@ -7,8 +7,8 @@ export default function Footer() {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Skills', href: '/about' },
     { name: 'Projects', href: '/projects' },
+    { name: 'Blog', href: '/blog' },
   ]
 
   return (
@@ -23,11 +23,11 @@ export default function Footer() {
           >
             <h3 className="text-2xl font-bold mb-2">
               <span className="bg-gradient-to-r from-gold-400 to-gold-500 bg-clip-text text-transparent">
-                David Tamutsa
+                David Tamutsa Chabikwa
               </span>
             </h3>
             <p className="text-gray-400">
-              Software Engineer & Full-Stack Developer
+              Software Engineer • Full-Stack Developer • AI Enthusiast
             </p>
           </motion.div>
 
@@ -60,26 +60,11 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h4 className="font-bold mb-4 text-gold-400">Follow Me</h4>
-            <div className="flex gap-4">
-              {[
-                { name: 'GitHub', url: 'https://github.com/davidchabikwa' },
-                { name: 'LinkedIn', url: 'https://linkedin.com/in/davidchabikwa' },
-                { name: 'Twitter', url: 'https://twitter.com/daviechabs' },
-              ].map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-gold-400 transition-colors text-lg"
-                  title={social.name}
-                >
-                  {social.name === 'GitHub' && '🐙'}
-                  {social.name === 'LinkedIn' && '💼'}
-                  {social.name === 'Twitter' && '𝕏'}
-                </a>
-              ))}
+            <h4 className="font-bold mb-4 text-gold-400">Reach Out</h4>
+            <div className="space-y-2 text-gray-400">
+              <a href="https://github.com/daviechabs" target="_blank" rel="noreferrer" className="block hover:text-gold-400 transition-colors">GitHub</a>
+              <a href="https://linkedin.com/in/david-chabikwa" target="_blank" rel="noreferrer" className="block hover:text-gold-400 transition-colors">LinkedIn</a>
+              <a href={`${import.meta.env.BASE_URL}David_Tamutsa_Chabikwa_Resume.pdf`} download className="block hover:text-gold-400 transition-colors">Download Resume</a>
             </div>
           </motion.div>
         </div>

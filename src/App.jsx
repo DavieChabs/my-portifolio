@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import AboutPage from './pages/AboutPage'
@@ -7,6 +7,8 @@ import ProjectsPage from './pages/ProjectsPage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
 import ResumePage from './pages/ResumePage'
 import ContactPage from './pages/ContactPage'
+import BlogPage from './pages/BlogPage'
+import BlogPostPage from './pages/BlogPostPage'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 
@@ -32,7 +34,7 @@ export default function App() {
 
   return (
     <div className={isDark ? 'dark' : ''}>
-      <BrowserRouter>
+      <HashRouter>
         <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 transition-colors duration-300">
           <Navbar isDark={isDark} setIsDark={setIsDark} />
           <Routes>
@@ -42,12 +44,14 @@ export default function App() {
             <Route path="/projects/:slug" element={<ProjectDetailPage />} />
             <Route path="/resume" element={<ResumePage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <Footer />
           <ScrollToTop />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
