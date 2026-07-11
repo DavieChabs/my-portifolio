@@ -65,7 +65,7 @@ export default function Hero() {
         {/* Profile Picture */}
         <motion.div variants={itemVariants} className="mb-8">
           <img
-            src="/assets/profile.jpg"
+            src={`${import.meta.env.BASE_URL}assets/profile.jpg`}
             alt="David Tamutsa Chabikwa"
             className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto object-cover shadow-lg border-4 border-gold-600 dark:border-gold-400"
           />
